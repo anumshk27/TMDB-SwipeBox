@@ -1,0 +1,1 @@
+TMDB-SwipeBox is a coding challenge app for SwipeBox. It is an iOS app that shows a list of popular movies from The Movie Database (TMDb) API and provides details about each movie. The app also works offline, allowing users to save data so they can view previously loaded content without an internet connection.
