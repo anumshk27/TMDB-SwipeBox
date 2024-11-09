@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CCF55CC52CE005F400B1F35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CC42CE005F400B1F35F /* AppDelegate.swift */; };
 		CCF55CC72CE005F400B1F35F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */; };
-		CCF55CC92CE005F400B1F35F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CC82CE005F400B1F35F /* ViewController.swift */; };
 		CCF55CCC2CE005F400B1F35F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CCF55CCB2CE005F400B1F35F /* Base */; };
 		CCF55CCF2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CCD2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld */; };
 		CCF55CD12CE005F600B1F35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF55CD02CE005F600B1F35F /* Assets.xcassets */; };
@@ -17,6 +16,13 @@
 		CCF55CDF2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CDE2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift */; };
 		CCF55CE92CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */; };
 		CCF55CEB2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */; };
+		CCF55CF92CE0076800B1F35F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CF82CE0076800B1F35F /* NetworkManager.swift */; };
+		CCF55CFE2CE0082000B1F35F /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CFD2CE0082000B1F35F /* MovieResponse.swift */; };
+		CCF55D012CE00E1E00B1F35F /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D002CE00E1E00B1F35F /* MoviesViewModel.swift */; };
+		CCF55D042CE00F5000B1F35F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D032CE00F5000B1F35F /* MovieCell.swift */; };
+		CCF55D062CE0100600B1F35F /* MoviesCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D052CE0100600B1F35F /* MoviesCollectionViewHandler.swift */; };
+		CCF55D082CE0101D00B1F35F /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D072CE0101D00B1F35F /* MoviesViewController.swift */; };
+		CCF55D0B2CE0122200B1F35F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CCF55D0A2CE0122200B1F35F /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,6 @@
 		CCF55CC12CE005F400B1F35F /* TMDB-SwipeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB-SwipeBox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF55CC42CE005F400B1F35F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCF55CC82CE005F400B1F35F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCF55CCB2CE005F400B1F35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCF55CCE2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMDB_SwipeBox.xcdatamodel; sourceTree = "<group>"; };
 		CCF55CD02CE005F600B1F35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +56,12 @@
 		CCF55CE42CE005F700B1F35F /* TMDB-SwipeBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TMDB-SwipeBoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxUITests.swift; sourceTree = "<group>"; };
 		CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CCF55CF82CE0076800B1F35F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CCF55CFD2CE0082000B1F35F /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		CCF55D002CE00E1E00B1F35F /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		CCF55D032CE00F5000B1F35F /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		CCF55D052CE0100600B1F35F /* MoviesCollectionViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewHandler.swift; sourceTree = "<group>"; };
+		CCF55D072CE0101D00B1F35F /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF55D0B2CE0122200B1F35F /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +115,10 @@
 			children = (
 				CCF55CC42CE005F400B1F35F /* AppDelegate.swift */,
 				CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */,
-				CCF55CC82CE005F400B1F35F /* ViewController.swift */,
+				CCF55CFA2CE007AB00B1F35F /* Model */,
+				CCF55D0C2CE0205600B1F35F /* View */,
+				CCF55CFF2CE00D3B00B1F35F /* ViewModel */,
+				CCF55CF72CE0074F00B1F35F /* Network */,
 				CCF55CCA2CE005F400B1F35F /* Main.storyboard */,
 				CCF55CD02CE005F600B1F35F /* Assets.xcassets */,
 				CCF55CD22CE005F600B1F35F /* LaunchScreen.storyboard */,
@@ -130,6 +145,48 @@
 			path = "TMDB-SwipeBoxUITests";
 			sourceTree = "<group>";
 		};
+		CCF55CF72CE0074F00B1F35F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55CF82CE0076800B1F35F /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CCF55CFA2CE007AB00B1F35F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55CFD2CE0082000B1F35F /* MovieResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCF55CFF2CE00D3B00B1F35F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55D002CE00E1E00B1F35F /* MoviesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCF55D022CE00F3500B1F35F /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55D032CE00F5000B1F35F /* MovieCell.swift */,
+				CCF55D052CE0100600B1F35F /* MoviesCollectionViewHandler.swift */,
+				CCF55D072CE0101D00B1F35F /* MoviesViewController.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		CCF55D0C2CE0205600B1F35F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55D022CE00F3500B1F35F /* CollectionView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +203,9 @@
 			dependencies = (
 			);
 			name = "TMDB-SwipeBox";
+			packageProductDependencies = (
+				CCF55D0A2CE0122200B1F35F /* SDWebImage */,
+			);
 			productName = "TMDB-SwipeBox";
 			productReference = CCF55CC12CE005F400B1F35F /* TMDB-SwipeBox.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +278,9 @@
 				Base,
 			);
 			mainGroup = CCF55CB82CE005F400B1F35F;
+			packageReferences = (
+				CCF55D092CE0122100B1F35F /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = CCF55CC22CE005F400B1F35F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,8 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF55CC92CE005F400B1F35F /* ViewController.swift in Sources */,
+				CCF55D082CE0101D00B1F35F /* MoviesViewController.swift in Sources */,
 				CCF55CCF2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld in Sources */,
+				CCF55D042CE00F5000B1F35F /* MovieCell.swift in Sources */,
+				CCF55D062CE0100600B1F35F /* MoviesCollectionViewHandler.swift in Sources */,
+				CCF55CFE2CE0082000B1F35F /* MovieResponse.swift in Sources */,
+				CCF55CF92CE0076800B1F35F /* NetworkManager.swift in Sources */,
+				CCF55D012CE00E1E00B1F35F /* MoviesViewModel.swift in Sources */,
 				CCF55CC52CE005F400B1F35F /* AppDelegate.swift in Sources */,
 				CCF55CC72CE005F400B1F35F /* SceneDelegate.swift in Sources */,
 			);
@@ -605,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCF55D092CE0122100B1F35F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCF55D0A2CE0122200B1F35F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCF55D092CE0122100B1F35F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CCF55CCD2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld */ = {
