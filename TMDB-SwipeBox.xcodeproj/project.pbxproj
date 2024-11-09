@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCF55CC52CE005F400B1F35F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CC42CE005F400B1F35F /* AppDelegate.swift */; };
+		CCF55CC72CE005F400B1F35F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */; };
+		CCF55CC92CE005F400B1F35F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CC82CE005F400B1F35F /* ViewController.swift */; };
+		CCF55CCC2CE005F400B1F35F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CCF55CCB2CE005F400B1F35F /* Base */; };
+		CCF55CCF2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CCD2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld */; };
+		CCF55CD12CE005F600B1F35F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF55CD02CE005F600B1F35F /* Assets.xcassets */; };
+		CCF55CD42CE005F600B1F35F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CCF55CD32CE005F600B1F35F /* Base */; };
+		CCF55CDF2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CDE2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift */; };
+		CCF55CE92CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */; };
+		CCF55CEB2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCF55CDB2CE005F700B1F35F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCF55CB92CE005F400B1F35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCF55CC02CE005F400B1F35F;
+			remoteInfo = "TMDB-SwipeBox";
+		};
+		CCF55CE52CE005F700B1F35F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCF55CB92CE005F400B1F35F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCF55CC02CE005F400B1F35F;
+			remoteInfo = "TMDB-SwipeBox";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCF55CC12CE005F400B1F35F /* TMDB-SwipeBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB-SwipeBox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF55CC42CE005F400B1F35F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CCF55CC82CE005F400B1F35F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCF55CCB2CE005F400B1F35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCF55CCE2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMDB_SwipeBox.xcdatamodel; sourceTree = "<group>"; };
+		CCF55CD02CE005F600B1F35F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCF55CD32CE005F600B1F35F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCF55CD52CE005F600B1F35F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF55CDA2CE005F700B1F35F /* TMDB-SwipeBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TMDB-SwipeBoxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF55CDE2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxTests.swift; sourceTree = "<group>"; };
+		CCF55CE42CE005F700B1F35F /* TMDB-SwipeBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TMDB-SwipeBoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxUITests.swift; sourceTree = "<group>"; };
+		CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCF55CBE2CE005F400B1F35F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF55CD72CE005F700B1F35F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF55CE12CE005F700B1F35F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCF55CB82CE005F400B1F35F = {
+			isa = PBXGroup;
+			children = (
+				CCF55CC32CE005F400B1F35F /* TMDB-SwipeBox */,
+				CCF55CDD2CE005F700B1F35F /* TMDB-SwipeBoxTests */,
+				CCF55CE72CE005F700B1F35F /* TMDB-SwipeBoxUITests */,
+				CCF55CC22CE005F400B1F35F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCF55CC22CE005F400B1F35F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55CC12CE005F400B1F35F /* TMDB-SwipeBox.app */,
+				CCF55CDA2CE005F700B1F35F /* TMDB-SwipeBoxTests.xctest */,
+				CCF55CE42CE005F700B1F35F /* TMDB-SwipeBoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCF55CC32CE005F400B1F35F /* TMDB-SwipeBox */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55CC42CE005F400B1F35F /* AppDelegate.swift */,
+				CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */,
+				CCF55CC82CE005F400B1F35F /* ViewController.swift */,
+				CCF55CCA2CE005F400B1F35F /* Main.storyboard */,
+				CCF55CD02CE005F600B1F35F /* Assets.xcassets */,
+				CCF55CD22CE005F600B1F35F /* LaunchScreen.storyboard */,
+				CCF55CD52CE005F600B1F35F /* Info.plist */,
+				CCF55CCD2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld */,
+			);
+			path = "TMDB-SwipeBox";
+			sourceTree = "<group>";
+		};
+		CCF55CDD2CE005F700B1F35F /* TMDB-SwipeBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55CDE2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift */,
+			);
+			path = "TMDB-SwipeBoxTests";
+			sourceTree = "<group>";
+		};
+		CCF55CE72CE005F700B1F35F /* TMDB-SwipeBoxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */,
+				CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */,
+			);
+			path = "TMDB-SwipeBoxUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCF55CC02CE005F400B1F35F /* TMDB-SwipeBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF55CEE2CE005F700B1F35F /* Build configuration list for PBXNativeTarget "TMDB-SwipeBox" */;
+			buildPhases = (
+				CCF55CBD2CE005F400B1F35F /* Sources */,
+				CCF55CBE2CE005F400B1F35F /* Frameworks */,
+				CCF55CBF2CE005F400B1F35F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TMDB-SwipeBox";
+			productName = "TMDB-SwipeBox";
+			productReference = CCF55CC12CE005F400B1F35F /* TMDB-SwipeBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCF55CD92CE005F700B1F35F /* TMDB-SwipeBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF55CF12CE005F700B1F35F /* Build configuration list for PBXNativeTarget "TMDB-SwipeBoxTests" */;
+			buildPhases = (
+				CCF55CD62CE005F700B1F35F /* Sources */,
+				CCF55CD72CE005F700B1F35F /* Frameworks */,
+				CCF55CD82CE005F700B1F35F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCF55CDC2CE005F700B1F35F /* PBXTargetDependency */,
+			);
+			name = "TMDB-SwipeBoxTests";
+			productName = "TMDB-SwipeBoxTests";
+			productReference = CCF55CDA2CE005F700B1F35F /* TMDB-SwipeBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCF55CE32CE005F700B1F35F /* TMDB-SwipeBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF55CF42CE005F700B1F35F /* Build configuration list for PBXNativeTarget "TMDB-SwipeBoxUITests" */;
+			buildPhases = (
+				CCF55CE02CE005F700B1F35F /* Sources */,
+				CCF55CE12CE005F700B1F35F /* Frameworks */,
+				CCF55CE22CE005F700B1F35F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCF55CE62CE005F700B1F35F /* PBXTargetDependency */,
+			);
+			name = "TMDB-SwipeBoxUITests";
+			productName = "TMDB-SwipeBoxUITests";
+			productReference = CCF55CE42CE005F700B1F35F /* TMDB-SwipeBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCF55CB92CE005F400B1F35F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					CCF55CC02CE005F400B1F35F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					CCF55CD92CE005F700B1F35F = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CCF55CC02CE005F400B1F35F;
+					};
+					CCF55CE32CE005F700B1F35F = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = CCF55CC02CE005F400B1F35F;
+					};
+				};
+			};
+			buildConfigurationList = CCF55CBC2CE005F400B1F35F /* Build configuration list for PBXProject "TMDB-SwipeBox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCF55CB82CE005F400B1F35F;
+			productRefGroup = CCF55CC22CE005F400B1F35F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCF55CC02CE005F400B1F35F /* TMDB-SwipeBox */,
+				CCF55CD92CE005F700B1F35F /* TMDB-SwipeBoxTests */,
+				CCF55CE32CE005F700B1F35F /* TMDB-SwipeBoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCF55CBF2CE005F400B1F35F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF55CD12CE005F600B1F35F /* Assets.xcassets in Resources */,
+				CCF55CD42CE005F600B1F35F /* Base in Resources */,
+				CCF55CCC2CE005F400B1F35F /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF55CD82CE005F700B1F35F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF55CE22CE005F700B1F35F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCF55CBD2CE005F400B1F35F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF55CC92CE005F400B1F35F /* ViewController.swift in Sources */,
+				CCF55CCF2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld in Sources */,
+				CCF55CC52CE005F400B1F35F /* AppDelegate.swift in Sources */,
+				CCF55CC72CE005F400B1F35F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF55CD62CE005F700B1F35F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF55CDF2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCF55CE02CE005F700B1F35F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF55CEB2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift in Sources */,
+				CCF55CE92CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCF55CDC2CE005F700B1F35F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCF55CC02CE005F400B1F35F /* TMDB-SwipeBox */;
+			targetProxy = CCF55CDB2CE005F700B1F35F /* PBXContainerItemProxy */;
+		};
+		CCF55CE62CE005F700B1F35F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCF55CC02CE005F400B1F35F /* TMDB-SwipeBox */;
+			targetProxy = CCF55CE52CE005F700B1F35F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCF55CCA2CE005F400B1F35F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCF55CCB2CE005F400B1F35F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCF55CD22CE005F600B1F35F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCF55CD32CE005F600B1F35F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCF55CEC2CE005F700B1F35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCF55CED2CE005F700B1F35F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCF55CEF2CE005F700B1F35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TMDB-SwipeBox/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Swipebox.TMDB-SwipeBox";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCF55CF02CE005F700B1F35F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TMDB-SwipeBox/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Swipebox.TMDB-SwipeBox";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CCF55CF22CE005F700B1F35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Swipebox.TMDB-SwipeBoxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMDB-SwipeBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TMDB-SwipeBox";
+			};
+			name = Debug;
+		};
+		CCF55CF32CE005F700B1F35F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Swipebox.TMDB-SwipeBoxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TMDB-SwipeBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TMDB-SwipeBox";
+			};
+			name = Release;
+		};
+		CCF55CF52CE005F700B1F35F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Swipebox.TMDB-SwipeBoxUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TMDB-SwipeBox";
+			};
+			name = Debug;
+		};
+		CCF55CF62CE005F700B1F35F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Swipebox.TMDB-SwipeBoxUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TMDB-SwipeBox";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCF55CBC2CE005F400B1F35F /* Build configuration list for PBXProject "TMDB-SwipeBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF55CEC2CE005F700B1F35F /* Debug */,
+				CCF55CED2CE005F700B1F35F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF55CEE2CE005F700B1F35F /* Build configuration list for PBXNativeTarget "TMDB-SwipeBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF55CEF2CE005F700B1F35F /* Debug */,
+				CCF55CF02CE005F700B1F35F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF55CF12CE005F700B1F35F /* Build configuration list for PBXNativeTarget "TMDB-SwipeBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF55CF22CE005F700B1F35F /* Debug */,
+				CCF55CF32CE005F700B1F35F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF55CF42CE005F700B1F35F /* Build configuration list for PBXNativeTarget "TMDB-SwipeBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF55CF52CE005F700B1F35F /* Debug */,
+				CCF55CF62CE005F700B1F35F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCF55CCD2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCF55CCE2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodel */,
+			);
+			currentVersion = CCF55CCE2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodel */;
+			path = TMDB_SwipeBox.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CCF55CB92CE005F400B1F35F /* Project object */;
+}
