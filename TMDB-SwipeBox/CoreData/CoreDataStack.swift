@@ -11,7 +11,7 @@ class CoreDataStack {
     static let shared = CoreDataStack()
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "YourModelName")
+        let container = NSPersistentContainer(name: "tmdb-cache")
         container.loadPersistentStores { description, error in
             if let error = error {
                 fatalError("Unresolved error \(error), \(error.localizedDescription)")
