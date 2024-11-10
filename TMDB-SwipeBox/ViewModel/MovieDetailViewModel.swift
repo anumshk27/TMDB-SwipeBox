@@ -1,5 +1,5 @@
 //
-//  MoviesViewModel.swift
+//  MovieDetailViewModel.swift
 //  TMDB-SwipeBox
 //
 //  Created by Haider Shahzad on 10/11/2024.
@@ -8,32 +8,36 @@
 import Foundation
 import Combine
 
-class MoviesViewModel {
-    @Published var movies: [Movie] = []
+class MovieDetailViewModel {
+    @Published var movie: Movie? = nil
     @Published var errorMessage: String? = nil
-    private var currentPage = 1
-    private var isLoading = false
+    @Published var isLoading = false
     
     private var cancellables = Set<AnyCancellable>()
+    private let movieService: MovieService
     
-    func fetchPopularMovies() {
+    init(movieService: MovieService = MovieServiceImpl()) {
+        self.movieService = movieService
+    }
+    
+    func fetchMovieDetails(movieId: Int) {
         guard !isLoading else { return }
         isLoading = true
         
-        NetworkManager.shared.fetchPopularMovies(page: currentPage)
+        movieService.fetchMovie(id: movieId)
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 self?.isLoading = false
                 switch completion {
                 case .failure(let error):
                     self?.errorMessage = error.localizedDescription
+                    print("Failed to fetch movie details:", error)
                 case .finished:
-                    break
+                    print("Successfully fetched movie details.")
                 }
-            }, receiveValue: { [weak self] newMovies in
-                self?.movies.append(contentsOf: newMovies)
-                self?.currentPage += 1
+            }, receiveValue: { [weak self] movie in
+                self?.movie = movie
             })
             .store(in: &cancellables)
     }
 }
-

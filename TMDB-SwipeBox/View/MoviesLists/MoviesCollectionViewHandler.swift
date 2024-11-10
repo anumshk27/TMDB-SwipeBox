@@ -8,12 +8,19 @@
 import UIKit
 import Combine
 
+protocol MoviesCollectionViewHandlerDelegate: AnyObject {
+    func didSelectMovie(_ movie: Movie)
+}
+
+
 class MoviesCollectionViewHandler: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDataSourcePrefetching {
     
-    private let viewModel: MoviesViewModel
+    weak var delegate: MoviesCollectionViewHandlerDelegate?
+
+    private let viewModel: MoviesListViewModel
     private let collectionView: UICollectionView
     
-    init(viewModel: MoviesViewModel, collectionView: UICollectionView) {
+    init(viewModel: MoviesListViewModel, collectionView: UICollectionView) {
         self.viewModel = viewModel
         self.collectionView = collectionView
         super.init()
@@ -42,11 +49,16 @@ class MoviesCollectionViewHandler: NSObject, UICollectionViewDataSource, UIColle
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie = viewModel.movies[indexPath.item]
+        delegate?.didSelectMovie(movie)
+    }
+    
     // MARK: - UICollectionViewDataSourcePrefetching
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         if indexPaths.contains(where: { $0.item >= self.viewModel.movies.count - 1 }) {
-            viewModel.fetchPopularMovies()
+            viewModel.fetchPopular()
         }
     }
 }

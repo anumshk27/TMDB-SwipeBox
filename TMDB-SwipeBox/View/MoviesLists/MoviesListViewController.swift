@@ -8,9 +8,9 @@
 import UIKit
 import Combine
 
-class MoviesViewController: UIViewController {
+class MoviesListViewController: UIViewController, MoviesCollectionViewHandlerDelegate {
     
-    private var viewModel = MoviesViewModel()
+    private var viewModel = MoviesListViewModel()
     private var collectionViewHandler: MoviesCollectionViewHandler?
     private var cancellables = Set<AnyCancellable>()
     
@@ -41,7 +41,7 @@ class MoviesViewController: UIViewController {
         setupViews()
         setupCollectionViewHandler()
         bindViewModel()
-        viewModel.fetchPopularMovies()
+        viewModel.fetchPopular()
     }
     
     private func setupViews() {
@@ -57,6 +57,7 @@ class MoviesViewController: UIViewController {
     
     private func setupCollectionViewHandler() {
         collectionViewHandler = MoviesCollectionViewHandler(viewModel: viewModel, collectionView: collectionView)
+        collectionViewHandler?.delegate = self;
     }
     
     private func bindViewModel() {
@@ -76,5 +77,13 @@ class MoviesViewController: UIViewController {
                 self?.present(alert, animated: true)
             }
             .store(in: &cancellables)
+    }
+    
+    // MARK: - MoviesCollectionViewHandlerDelegate
+    
+    func didSelectMovie(_ movie: Movie) {
+        let detailVC = MovieDetailsController()
+        detailVC.movie = movie
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

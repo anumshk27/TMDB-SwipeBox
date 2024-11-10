@@ -1,6 +1,7 @@
 import Foundation
 
-struct MovieResponse: Decodable {
+/*
+struct MovieListResponse: Decodable {
     let page: Int
     let results: [Movie]
     let totalPages: Int
@@ -39,4 +40,4 @@ struct Movie: Identifiable, Decodable {
         }
         return nil
     }
-}
+}*/
