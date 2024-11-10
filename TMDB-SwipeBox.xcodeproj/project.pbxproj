@@ -16,7 +16,6 @@
 		CCF55CDF2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CDE2CE005F700B1F35F /* TMDB_SwipeBoxTests.swift */; };
 		CCF55CE92CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */; };
 		CCF55CEB2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */; };
-		CCF55CFE2CE0082000B1F35F /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55CFD2CE0082000B1F35F /* MovieListResponse.swift */; };
 		CCF55D012CE00E1E00B1F35F /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D002CE00E1E00B1F35F /* MoviesListViewModel.swift */; };
 		CCF55D042CE00F5000B1F35F /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D032CE00F5000B1F35F /* MovieCell.swift */; };
 		CCF55D062CE0100600B1F35F /* MoviesCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D052CE0100600B1F35F /* MoviesCollectionViewHandler.swift */; };
@@ -26,8 +25,10 @@
 		CCF55D112CE097B300B1F35F /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D102CE097B300B1F35F /* MovieDetailViewModel.swift */; };
 		CCF55D142CE099FC00B1F35F /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D132CE099FC00B1F35F /* MovieService.swift */; };
 		CCF55D162CE09B5200B1F35F /* MovieServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D152CE09B5200B1F35F /* MovieServiceImpl.swift */; };
-		CCF55D182CE09DDF00B1F35F /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D172CE09DDF00B1F35F /* MovieDetailResponse.swift */; };
 		CCF55D1A2CE0A1E200B1F35F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D192CE0A1E200B1F35F /* Movie.swift */; };
+		CCF55D1E2CE0AF1F00B1F35F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D1D2CE0AF1F00B1F35F /* Extension.swift */; };
+		CCF55D202CE0B84500B1F35F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D1F2CE0B84500B1F35F /* CardView.swift */; };
+		CCF55D232CE0DA0D00B1F35F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF55D222CE0DA0D00B1F35F /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +62,6 @@
 		CCF55CE42CE005F700B1F35F /* TMDB-SwipeBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TMDB-SwipeBoxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF55CE82CE005F700B1F35F /* TMDB_SwipeBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxUITests.swift; sourceTree = "<group>"; };
 		CCF55CEA2CE005F700B1F35F /* TMDB_SwipeBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_SwipeBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CCF55CFD2CE0082000B1F35F /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
 		CCF55D002CE00E1E00B1F35F /* MoviesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
 		CCF55D032CE00F5000B1F35F /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		CCF55D052CE0100600B1F35F /* MoviesCollectionViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewHandler.swift; sourceTree = "<group>"; };
@@ -70,8 +70,10 @@
 		CCF55D102CE097B300B1F35F /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		CCF55D132CE099FC00B1F35F /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		CCF55D152CE09B5200B1F35F /* MovieServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceImpl.swift; sourceTree = "<group>"; };
-		CCF55D172CE09DDF00B1F35F /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
 		CCF55D192CE0A1E200B1F35F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		CCF55D1D2CE0AF1F00B1F35F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CCF55D1F2CE0B84500B1F35F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CCF55D222CE0DA0D00B1F35F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,9 @@
 			children = (
 				CCF55CC42CE005F400B1F35F /* AppDelegate.swift */,
 				CCF55CC62CE005F400B1F35F /* SceneDelegate.swift */,
+				CCF55D1D2CE0AF1F00B1F35F /* Extension.swift */,
+				CCF55D1F2CE0B84500B1F35F /* CardView.swift */,
+				CCF55D212CE0DA0100B1F35F /* CoreData */,
 				CCF55D122CE099EB00B1F35F /* Service */,
 				CCF55CFA2CE007AB00B1F35F /* Model */,
 				CCF55D0C2CE0205600B1F35F /* View */,
@@ -158,8 +163,6 @@
 		CCF55CFA2CE007AB00B1F35F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CCF55CFD2CE0082000B1F35F /* MovieListResponse.swift */,
-				CCF55D172CE09DDF00B1F35F /* MovieDetailResponse.swift */,
 				CCF55D192CE0A1E200B1F35F /* Movie.swift */,
 			);
 			path = Model;
@@ -208,6 +211,14 @@
 				CCF55D152CE09B5200B1F35F /* MovieServiceImpl.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		CCF55D212CE0DA0100B1F35F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CCF55D222CE0DA0D00B1F35F /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,17 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF55D232CE0DA0D00B1F35F /* CoreDataStack.swift in Sources */,
+				CCF55D202CE0B84500B1F35F /* CardView.swift in Sources */,
 				CCF55D1A2CE0A1E200B1F35F /* Movie.swift in Sources */,
 				CCF55D082CE0101D00B1F35F /* MoviesListViewController.swift in Sources */,
 				CCF55CCF2CE005F400B1F35F /* TMDB_SwipeBox.xcdatamodeld in Sources */,
 				CCF55D042CE00F5000B1F35F /* MovieCell.swift in Sources */,
-				CCF55D182CE09DDF00B1F35F /* MovieDetailResponse.swift in Sources */,
 				CCF55D162CE09B5200B1F35F /* MovieServiceImpl.swift in Sources */,
 				CCF55D0F2CE0302A00B1F35F /* MovieDetails.swift in Sources */,
 				CCF55D062CE0100600B1F35F /* MoviesCollectionViewHandler.swift in Sources */,
-				CCF55CFE2CE0082000B1F35F /* MovieListResponse.swift in Sources */,
 				CCF55D142CE099FC00B1F35F /* MovieService.swift in Sources */,
 				CCF55D112CE097B300B1F35F /* MovieDetailViewModel.swift in Sources */,
+				CCF55D1E2CE0AF1F00B1F35F /* Extension.swift in Sources */,
 				CCF55D012CE00E1E00B1F35F /* MoviesListViewModel.swift in Sources */,
 				CCF55CC52CE005F400B1F35F /* AppDelegate.swift in Sources */,
 				CCF55CC72CE005F400B1F35F /* SceneDelegate.swift in Sources */,

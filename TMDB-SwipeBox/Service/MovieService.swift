@@ -13,35 +13,6 @@ protocol MovieService {
     func fetchMovie(id: Int) -> AnyPublisher<Movie, Error>
 }
 
-
-public enum Endpoint: String, CustomStringConvertible, CaseIterable {
-    case popular
-    case movie = "details"
-    
-    public var description: String {
-        switch self {
-        case .popular: return "Popular"
-        case .movie: return "Movie"
-        }
-    }
-    
-    public init?(index: Int) {
-        switch index {
-        case 0: self = .popular
-        case 1: self = .movie
-        default: return nil
-        }
-    }
-    
-    public init?(description: String) {
-        guard let first = Endpoint.allCases.first(where: { $0.description == description }) else {
-            return nil
-        }
-        self = first
-    }
-    
-}
-
 public enum MovieError: Error {
     case apiError
     case invalidEndpoint
@@ -49,3 +20,4 @@ public enum MovieError: Error {
     case noData
     case serializationError
 }
+

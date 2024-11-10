@@ -6,103 +6,92 @@
 //
 
 import UIKit
+import Combine
+import SDWebImage
 
 class MovieDetailsController: UIViewController {
     
-    var movie: Movie?
+    @IBOutlet var backDropImg: UIImageView!
+    @IBOutlet var posterImg: UIImageView!
     
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 24)
-        label.numberOfLines = 0
-        return label
-    }()
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var overviewLabel: UILabel!
+    @IBOutlet var releaseDateLabel: UILabel!
+    @IBOutlet var ratingLabel: UILabel!
     
-    private let posterImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        return imageView
-    }()
+    var movie: Movie!
+    var viewModel: MovieDetailViewModel!
+    private var cancellables = Set<AnyCancellable>()
     
-    private let overviewLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.numberOfLines = 0
-        return label
-    }()
     
-    private let releaseDateLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .gray
-        return label
-    }()
-    
-    private let ratingLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
-        return label
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupLayout()
-        configureUI()
-    }
-    
-    private func setupViews() {
-        view.backgroundColor = .white
-        view.addSubview(titleLabel)
-        view.addSubview(posterImageView)
-        view.addSubview(overviewLabel)
-        view.addSubview(releaseDateLabel)
-        view.addSubview(ratingLabel)
-    }
-    
-    private func setupLayout() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        posterImageView.translatesAutoresizingMaskIntoConstraints = false
-        overviewLabel.translatesAutoresizingMaskIntoConstraints = false
-        releaseDateLabel.translatesAutoresizingMaskIntoConstraints = false
-        ratingLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
-            posterImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
-            posterImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            posterImageView.heightAnchor.constraint(equalToConstant: 300),
-            posterImageView.widthAnchor.constraint(equalToConstant: 200),
-            
-            overviewLabel.topAnchor.constraint(equalTo: posterImageView.bottomAnchor, constant: 16),
-            overviewLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            overviewLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
-            releaseDateLabel.topAnchor.constraint(equalTo: overviewLabel.bottomAnchor, constant: 16),
-            releaseDateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            releaseDateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
-            ratingLabel.topAnchor.constraint(equalTo: releaseDateLabel.bottomAnchor, constant: 16),
-            ratingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            ratingLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
+        viewModel = MovieDetailViewModel()
+        bindViewModel()
+        
+        viewModel.fetchMovieDetails(movieId: movie.id!)
+        
     }
     
-    private func configureUI() {
+    
+    private let gradientOverlay: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.colors = [UIColor.clear.cgColor, UIColor.black.withAlphaComponent(0.6).cgColor]
+        gradient.locations = [0.5, 1.0]
+        return gradient
+    }()
+    
+    
+    private func updateUI(with movie: Movie?) {
         guard let movie = movie else { return }
         
-        titleLabel.text = movie.title
-        overviewLabel.text = movie.overview
-        releaseDateLabel.text = "Release Date: \(movie.releaseDate ?? "N/A")"
-        ratingLabel.text = "Rating: \(String(format: "%.1f", movie.voteAverage))"
         
-        if let posterPath = movie.posterPath {
-            let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
-            posterImageView.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "placeholder"))
-        }
+        let title = movie.title ?? "No Title"
+        let releaseDate = movie.releaseDate ?? "N/A"
+        
+        let attributedText = NSAttributedString()
+            .highlightTitleAndReleaseDate(
+                title: title,
+                releaseDate: releaseDate,
+                titleColor: .black, // Title color
+                titleFont: UIFont.boldSystemFont(ofSize: 18), // Title font
+                releaseDateColor: .gray, // Release date color
+                releaseDateFont: UIFont.systemFont(ofSize: 14) // Release date font
+            )
+        
+        titleLabel.attributedText = attributedText
+        overviewLabel.text = movie.overview
+        ratingLabel.text = "⭐️ \(String(format: "%.1f", movie.voteAverage ?? 0.0))"
+        posterImg.sd_setImage(with: movie.posterURL, placeholderImage: UIImage(named: "placeholder"))
+        backDropImg.sd_setImage(with: movie.backdropURL, placeholderImage: UIImage(named: "placeholder"))
+        
+    }
+    
+    private func bindViewModel() {
+        viewModel.$movie
+            .sink { [weak self] movie in
+                self?.updateUI(with: movie)
+            }
+            .store(in: &cancellables)
+        
+        viewModel.$errorMessage
+            .sink { [weak self] errorMessage in
+                if let error = errorMessage {
+                    self?.showError(error)
+                }
+            }
+            .store(in: &cancellables)
+        
+        viewModel.$isLoading
+            .sink { [weak self] isLoading in
+                if isLoading {
+                    self?.showLoadingIndicator()
+                } else {
+                    self?.hideLoadingIndicator()
+                }
+            }
+            .store(in: &cancellables)
     }
 }

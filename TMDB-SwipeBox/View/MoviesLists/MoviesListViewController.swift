@@ -14,13 +14,6 @@ class MoviesListViewController: UIViewController, MoviesCollectionViewHandlerDel
     private var collectionViewHandler: MoviesCollectionViewHandler?
     private var cancellables = Set<AnyCancellable>()
     
-    /*private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 100, height: 150)
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        return UICollectionView(frame: .zero, collectionViewLayout: layout)
-    }()*/
-    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let padding: CGFloat = 10
@@ -34,7 +27,7 @@ class MoviesListViewController: UIViewController, MoviesCollectionViewHandlerDel
         layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         return UICollectionView(frame: .zero, collectionViewLayout: layout)
     }()
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +54,7 @@ class MoviesListViewController: UIViewController, MoviesCollectionViewHandlerDel
     }
     
     private func bindViewModel() {
+        // Binding movie data to update the collection view
         viewModel.$movies
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
@@ -68,22 +62,37 @@ class MoviesListViewController: UIViewController, MoviesCollectionViewHandlerDel
             }
             .store(in: &cancellables)
         
+        // Binding error message to show an alert
         viewModel.$errorMessage
             .compactMap { $0 }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] errorMessage in
-                let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self?.present(alert, animated: true)
+                self?.showError(errorMessage)
+            }
+            .store(in: &cancellables)
+        
+        // Binding loading state to show/hide the loading indicator
+        viewModel.$isLoading
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isLoading in
+                if isLoading {
+                    self?.showLoadingIndicator()
+                } else {
+                    self?.hideLoadingIndicator()
+                }
             }
             .store(in: &cancellables)
     }
     
+    
     // MARK: - MoviesCollectionViewHandlerDelegate
     
     func didSelectMovie(_ movie: Movie) {
-        let detailVC = MovieDetailsController()
+        
+        let detailVC =  self.storyboard?.instantiateViewController(withIdentifier: "MovieDetailsController") as! MovieDetailsController
         detailVC.movie = movie
         navigationController?.pushViewController(detailVC, animated: true)
+        
+        
     }
 }

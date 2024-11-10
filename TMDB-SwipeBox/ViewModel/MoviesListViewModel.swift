@@ -11,8 +11,9 @@ import Combine
 class MoviesListViewModel {
     @Published var movies: [Movie] = []
     @Published var errorMessage: String? = nil
+    @Published var isLoading = false
+    
     private var currentPage = 1
-    private var isLoading = false
     
     private var cancellables = Set<AnyCancellable>()
     
